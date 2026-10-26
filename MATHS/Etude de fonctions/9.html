@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<title>9</title>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#1a5276">
-
+<title>Exemples rédigés</title>
 <script>
   MathJax = {
     tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] },
@@ -218,15 +217,11 @@
   .btn-corr:focus-visible { outline: 3px solid #f39c12; outline-offset: 2px; }
 </style>
 
-<style id="open-link-style">
-.open-link-container{text-align:center;padding:18px 12px;margin:20px 0 8px;}
-.open-link-btn{display:inline-block;padding:10px 22px;background:#315bea;color:#fff;border-radius:8px;text-decoration:none;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:0.95rem;font-weight:600;line-height:1.4;}
-</style>
 </head>
-<body>
-<h2>IX. Exemples rédigés</h2>
+<body >
+<div class="container">
 
-<!-- EXO 1 -->
+<h2>IX. Exemples rédigés</h2>
 <div class="exo">
   <div class="enonce">
     <strong>Exemple 1 :</strong> \(f(x) = \dfrac{2x + 1}{x - 1}\).<br>
@@ -241,8 +236,6 @@
     <span class="resultat">C_f admet une asymptote horizontale y = 2</span>
   </div>
 </div>
-
-<!-- EXO 2 -->
 <div class="exo">
   <div class="enonce">
     <strong>Exemple 2 :</strong> \(f(x) = \dfrac{x^2 + 1}{x}\).<br>
@@ -259,8 +252,6 @@
     <span class="resultat">C_f admet une asymptote oblique y = x</span>
   </div>
 </div>
-
-<!-- EXO 3 -->
 <div class="exo">
   <div class="enonce">
     <strong>Exemple 3 :</strong> \(f(x) = x^2\).<br>
@@ -276,8 +267,6 @@
     <span class="resultat">C_f admet une branche parabolique de direction (Oy)</span>
   </div>
 </div>
-
-<!-- EXO 4 -->
 <div class="exo">
   <div class="enonce">
     <strong>Exemple 4 :</strong> \(f(x) = \sqrt{x}\).<br>
@@ -293,8 +282,6 @@
     <span class="resultat">C_f admet une branche parabolique de direction (Ox)</span>
   </div>
 </div>
-
-<!-- EXO 5 -->
 <div class="exo">
   <div class="enonce">
     <strong>Exemple 5 :</strong> \(f(x) = x + \sqrt{x}\).<br>
@@ -311,8 +298,6 @@
     <span class="resultat">C_f admet une branche parabolique de direction y = x</span>
   </div>
 </div>
-
-<!-- EXO 6 -->
 <div class="exo">
   <div class="enonce">
     <strong>Exemple 6 :</strong> \(f(x) = \dfrac{1}{x - 2}\).<br>
@@ -327,26 +312,45 @@
     <span class="resultat">C_f admet une asymptote verticale x = 2</span>
   </div>
 </div>
-
 <hr>
 
-<!-- ============================================ -->
+<!-- Bouton en bas de page -->
+<div class="open-link-container">
+    <button class="open-link-btn" onclick="openHtmlPage()">
+        Si la page ne s'affiche pas correctement : Cliquez ici
+    </button>
+</div>
 
-<div class="open-link-container"><a href="#" class="open-link-btn" id="openHtmlPageBtn">📂 Ouvrir ce fichier</a></div>
+<style>
+  .open-link-container {
+    display: flex; justify-content: center; align-items: center;
+    margin: 30px auto 20px; padding: 0 12px; width: 100%;
+    box-sizing: border-box;
+  }
+  .open-link-btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    gap: 10px; background: linear-gradient(135deg, #1a5276, #2874a6);
+    color: #ffffff; border: none; padding: 16px 28px;
+    font-size: 1rem; font-weight: 700; border-radius: 12px;
+    cursor: pointer; box-shadow: 0 6px 18px rgba(26, 82, 118, 0.35);
+    font-family: inherit; max-width: 100%; text-align: center;
+    line-height: 1.35;
+  }
+  .open-link-btn:hover {
+    background: linear-gradient(135deg, #154360, #1f5b85);
+  }
+  @media (max-width: 480px) {
+    .open-link-btn { padding: 14px 20px; font-size: 0.9rem; width: 100%; }
+  }
+</style>
+
 <script>
-(function(){
-  var btn = document.getElementById("openHtmlPageBtn");
-  if(!btn) return;
-  btn.addEventListener("click", function(e){
-    e.preventDefault();
-    var doc = document.documentElement.outerHTML;
-    var blob = new Blob([doc], {type:"text/html;charset=utf-8"});
-    var url = URL.createObjectURL(blob);
-    window.open(url, "_blank");
-    setTimeout(function(){ URL.revokeObjectURL(url); }, 60000);
-  });
-})();
+  function openHtmlPage() {
+    window.open(window.location.href, '_blank');
+  }
 </script>
+
+</div>
 <script>
 function toggleCorr(btn) {
   var corr = btn.nextElementSibling;
