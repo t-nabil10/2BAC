@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#1a5276">
-<title>III. Racines d&#39;un polynôme de second degré</title>
+<title>Racines d&#39;un polynôme de second degré</title>
 <script>
   MathJax = {
     tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] },
@@ -234,67 +235,19 @@
   .btn-corr:focus-visible { outline: 3px solid #f39c12; outline-offset: 2px; }
 </style>
 
-<style id="open-link-style">
-  .open-link-container {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100% !important;
-    margin: 28px 0 20px !important;
-    padding: 0 !important;
-    text-align: center !important;
-    clear: both;
-  }
-  .open-link-btn {
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    background: #2874a6 !important;
-    color: #ffffff !important;
-    border: none !important;
-    border-radius: 10px !important;
-    padding: 13px 22px !important;
-    font-size: clamp(0.9rem, 3.4vw, 1.05rem) !important;
-    font-weight: 700 !important;
-    font-family: inherit !important;
-    line-height: 1.3 !important;
-    cursor: pointer !important;
-    box-shadow: 0 4px 14px rgba(40, 116, 166, 0.35) !important;
-    transition: background 0.2s, transform 0.1s, box-shadow 0.2s !important;
-    max-width: 100%;
-    text-align: center;
-  }
-  .open-link-btn:hover {
-    background: #1a5276 !important;
-    box-shadow: 0 6px 18px rgba(26, 82, 118, 0.45) !important;
-  }
-  .open-link-btn:active { transform: scale(0.97); }
-  .open-link-btn i { font-size: 1.05em; }
-  @media (max-width: 480px) {
-    .open-link-btn {
-      width: 100% !important;
-      padding: 12px 16px !important;
-      font-size: 0.9rem !important;
-    }
-  }
-</style>
 </head>
-<body>
-<h2>III. Racines d'un polynôme de second degré</h2>
+<body >
+<div class="container">
 
+<h2>III. Racines d'un polynôme de second degré</h2>
 <div class="encadre">
 <strong>Définition :</strong> On appelle <strong>racine</strong> (ou solution) du polynôme \(f(x) = ax^2 + bx + c\) tout réel \(x\) tel que \(f(x) = 0\).
 </div>
-
 <h3>1) Le discriminant \(\Delta\)</h3>
-
 <div class="formule">
   \[ \Delta = b^2 - 4ac \]
 </div>
-
 <h3>2) Les trois cas possibles</h3>
-
 <div class="table-wrap">
 <table>
 <thead>
@@ -319,14 +272,11 @@
 </tbody>
 </table>
 </div>
-
 <div class="conseil">
 💡 <strong>Lien avec la forme canonique :</strong> les racines s'obtiennent aussi à partir de la forme canonique :
 \[ f(x) = 0 \iff a(x - \alpha)^2 + \beta = 0 \iff (x - \alpha)^2 = -\dfrac{\beta}{a} \]
 Si \(-\dfrac{\beta}{a} \geq 0\), alors \(x = \alpha \pm \sqrt{-\dfrac{\beta}{a}}\).
 </div>
-
-<!-- EXO 4 -->
 <div class="exo">
   <div class="enonce">
     <strong>Exemple 4 :</strong> Résoudre \(x^2 - 5x + 6 = 0\).
@@ -342,8 +292,6 @@ Si \(-\dfrac{\beta}{a} \geq 0\), alors \(x = \alpha \pm \sqrt{-\dfrac{\beta}{a}}
     <span class="resultat">S = {2, 3}</span>
   </div>
 </div>
-
-<!-- EXO 5 -->
 <div class="exo">
   <div class="enonce">
     <strong>Exemple 5 :</strong> Résoudre \(x^2 - 4x + 4 = 0\).
@@ -359,8 +307,6 @@ Si \(-\dfrac{\beta}{a} \geq 0\), alors \(x = \alpha \pm \sqrt{-\dfrac{\beta}{a}}
     <span class="resultat">S = {2}</span>
   </div>
 </div>
-
-<!-- EXO 6 -->
 <div class="exo">
   <div class="enonce">
     <strong>Exemple 6 :</strong> Résoudre \(2x^2 + x + 3 = 0\).
@@ -375,20 +321,45 @@ Si \(-\dfrac{\beta}{a} \geq 0\), alors \(x = \alpha \pm \sqrt{-\dfrac{\beta}{a}}
     <span class="resultat">S = ∅ (pas de solution dans ℝ)</span>
   </div>
 </div>
-
 <hr>
-
-<!-- ============================================ -->
-
 
 <!-- Bouton en bas de page -->
 <div class="open-link-container">
     <button class="open-link-btn" onclick="openHtmlPage()">
-        <i class="fas fa-window-restore"></i>
         Si la page ne s'affiche pas correctement : Cliquez ici
     </button>
 </div>
 
+<style>
+  .open-link-container {
+    display: flex; justify-content: center; align-items: center;
+    margin: 30px auto 20px; padding: 0 12px; width: 100%;
+    box-sizing: border-box;
+  }
+  .open-link-btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    gap: 10px; background: linear-gradient(135deg, #1a5276, #2874a6);
+    color: #ffffff; border: none; padding: 16px 28px;
+    font-size: 1rem; font-weight: 700; border-radius: 12px;
+    cursor: pointer; box-shadow: 0 6px 18px rgba(26, 82, 118, 0.35);
+    font-family: inherit; max-width: 100%; text-align: center;
+    line-height: 1.35;
+  }
+  .open-link-btn:hover {
+    background: linear-gradient(135deg, #154360, #1f5b85);
+  }
+  @media (max-width: 480px) {
+    .open-link-btn { padding: 14px 20px; font-size: 0.9rem; width: 100%; }
+  }
+</style>
+
+<script>
+  function openHtmlPage() {
+    window.open(window.location.href, '_blank');
+  }
+</script>
+
+</div>
 <script>
 function toggleCorr(btn) {
   var corr = btn.nextElementSibling;
@@ -407,13 +378,5 @@ function toggleCorr(btn) {
   }
 }
 </script>
-
-<script>
-  function openHtmlPage() {
-    // Ouvre le fichier dans une nouvelle fenêtre/onglet.
-    window.open(window.location.href, '_blank');
-  }
-</script>
-
 </body>
 </html>
