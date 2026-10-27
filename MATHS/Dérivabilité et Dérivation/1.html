@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#1a5276">
-<title>I. Nombre dérivé en un point</title>
+<title>Nombre dérivé en un point</title>
 <script>
   MathJax = {
     tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] },
@@ -193,94 +194,66 @@
   .btn-corr:focus-visible { outline: 3px solid #f39c12; outline-offset: 2px; }
 </style>
 
-<style id="open-link-style">
-  .open-link-container {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100% !important;
-    margin: 28px 0 20px !important;
-    padding: 0 !important;
-    text-align: center !important;
-    clear: both;
-  }
-  .open-link-btn {
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    background: #2874a6 !important;
-    color: #ffffff !important;
-    border: none !important;
-    border-radius: 10px !important;
-    padding: 13px 22px !important;
-    font-size: clamp(0.9rem, 3.4vw, 1.05rem) !important;
-    font-weight: 700 !important;
-    font-family: inherit !important;
-    line-height: 1.3 !important;
-    cursor: pointer !important;
-    box-shadow: 0 4px 14px rgba(40, 116, 166, 0.35) !important;
-    transition: background 0.2s, transform 0.1s, box-shadow 0.2s !important;
-    max-width: 100%;
-    text-align: center;
-  }
-  .open-link-btn:hover {
-    background: #1a5276 !important;
-    box-shadow: 0 6px 18px rgba(26, 82, 118, 0.45) !important;
-  }
-  .open-link-btn:active { transform: scale(0.97); }
-  .open-link-btn i { font-size: 1.05em; }
-  @media (max-width: 480px) {
-    .open-link-btn {
-      width: 100% !important;
-      padding: 12px 16px !important;
-      font-size: 0.9rem !important;
-    }
-  }
-</style>
 </head>
-<body>
-
-
+<body >
 <div class="container">
-
 <h1>
   Dérivabilité et Dérivation
   <span class="subtitle">2ème Bac Sciences Économiques — Maroc</span>
 </h1>
-
-<!-- ============================================ -->
 <h2>I. Nombre dérivé en un point</h2>
-
 <div class="encadre">
 <strong>Définition :</strong> Soit \(f\) une fonction définie sur un intervalle ouvert contenant \(a\).<br><br>
 On dit que \(f\) est <strong>dérivable en \(a\)</strong> si le taux d'accroissement admet une limite finie lorsque \(h\) tend vers \(0\) :
 \[ \lim\limits_{h \to 0} \dfrac{f(a+h) - f(a)}{h} = L \]
 Ce réel \(L\) est appelé <strong>nombre dérivé de \(f\) en \(a\)</strong> et on note \(f'(a) = L\).
 </div>
-
 <p>On peut aussi écrire de façon équivalente :</p>
 <div class="formule">
   \[ f'(a) = \lim\limits_{x \to a} \dfrac{f(x) - f(a)}{x - a} \]
 </div>
-
 <div class="figure">
   📈 Interprétation graphique : \(f'(a)\) est le <strong>coefficient directeur de la tangente</strong> à la courbe de \(f\) au point d'abscisse \(a\).
 </div>
-
 <hr>
-
-<!-- ============================================ -->
-</div>
 
 <!-- Bouton en bas de page -->
 <div class="open-link-container">
     <button class="open-link-btn" onclick="openHtmlPage()">
-        <i class="fas fa-window-restore"></i>
         Si la page ne s'affiche pas correctement : Cliquez ici
     </button>
 </div>
 
+<style>
+  .open-link-container {
+    display: flex; justify-content: center; align-items: center;
+    margin: 30px auto 20px; padding: 0 12px; width: 100%;
+    box-sizing: border-box;
+  }
+  .open-link-btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    gap: 10px; background: linear-gradient(135deg, #1a5276, #2874a6);
+    color: #ffffff; border: none; padding: 16px 28px;
+    font-size: 1rem; font-weight: 700; border-radius: 12px;
+    cursor: pointer; box-shadow: 0 6px 18px rgba(26, 82, 118, 0.35);
+    font-family: inherit; max-width: 100%; text-align: center;
+    line-height: 1.35;
+  }
+  .open-link-btn:hover {
+    background: linear-gradient(135deg, #154360, #1f5b85);
+  }
+  @media (max-width: 480px) {
+    .open-link-btn { padding: 14px 20px; font-size: 0.9rem; width: 100%; }
+  }
+</style>
+
+<script>
+  function openHtmlPage() {
+    window.open(window.location.href, '_blank');
+  }
+</script>
+
+</div>
 <script>
 function toggleCorr(btn) {
   var corr = btn.nextElementSibling;
@@ -299,13 +272,5 @@ function toggleCorr(btn) {
   }
 }
 </script>
-
-<script>
-  function openHtmlPage() {
-    // Ouvre le fichier dans une nouvelle fenêtre/onglet.
-    window.open(window.location.href, '_blank');
-  }
-</script>
-
 </body>
 </html>

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#1a5276">
-<title>II. Arrangements et permutations</title>
+<title>Arrangements et permutations</title>
 <script>
   MathJax = {
     tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] },
@@ -215,92 +216,38 @@
   .btn-corr:focus-visible { outline: 3px solid #f39c12; outline-offset: 2px; }
 </style>
 
-<style id="open-link-style">
-  .open-link-container {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100% !important;
-    margin: 28px 0 20px !important;
-    padding: 0 !important;
-    text-align: center !important;
-    clear: both;
-  }
-  .open-link-btn {
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    background: #2874a6 !important;
-    color: #ffffff !important;
-    border: none !important;
-    border-radius: 10px !important;
-    padding: 13px 22px !important;
-    font-size: clamp(0.9rem, 3.4vw, 1.05rem) !important;
-    font-weight: 700 !important;
-    font-family: inherit !important;
-    line-height: 1.3 !important;
-    cursor: pointer !important;
-    box-shadow: 0 4px 14px rgba(40, 116, 166, 0.35) !important;
-    transition: background 0.2s, transform 0.1s, box-shadow 0.2s !important;
-    max-width: 100%;
-    text-align: center;
-  }
-  .open-link-btn:hover {
-    background: #1a5276 !important;
-    box-shadow: 0 6px 18px rgba(26, 82, 118, 0.45) !important;
-  }
-  .open-link-btn:active { transform: scale(0.97); }
-  .open-link-btn i { font-size: 1.05em; }
-  @media (max-width: 480px) {
-    .open-link-btn {
-      width: 100% !important;
-      padding: 12px 16px !important;
-      font-size: 0.9rem !important;
-    }
-  }
-</style>
 </head>
-<body>
+<body >
+<div class="container">
+
 <h2>II. Arrangements et permutations</h2>
-
 <h3>1) Factorielle</h3>
-
 <div class="encadre">
 <strong>Définition :</strong> Pour tout entier \(n \geq 1\), on appelle <strong>factorielle \(n\)</strong> et on note \(n!\) le produit :
 \[ n! = n \times (n-1) \times \cdots \times 2 \times 1 \]
 Par convention : \(0! = 1\).
 </div>
-
 <div class="formule">
   \[ 1! = 1, \quad 2! = 2, \quad 3! = 6, \quad 4! = 24, \quad 5! = 120 \]
 </div>
-
 <h3>2) Arrangements</h3>
-
 <div class="encadre">
 <strong>Définition :</strong> Un <strong>arrangement</strong> de \(k\) éléments parmi \(n\) (\(k \leq n\)) est une liste ordonnée de \(k\) éléments distincts choisis parmi \(n\).<br><br>
 Le nombre d'arrangements est :
 \[ A_n^k = \dfrac{n!}{(n-k)!} = n \times (n-1) \times \cdots \times (n-k+1) \]
 </div>
-
 <div class="interpretation">
   L'ordre compte et les éléments ne se répètent pas. Exemple : le podium d'une course (1er, 2ème, 3ème).
 </div>
-
 <h3>3) Permutations</h3>
-
 <div class="encadre">
 <strong>Définition :</strong> Une <strong>permutation</strong> de \(n\) éléments est un arrangement de \(n\) éléments parmi \(n\) (tous les éléments).<br><br>
 Le nombre de permutations est :
 \[ n! \]
 </div>
-
 <div class="interpretation">
   On range tous les éléments dans un ordre donné. Exemple : classer 5 livres sur une étagère.
 </div>
-
-<!-- EXO 2 -->
 <div class="exo">
   <div class="enonce">
     <strong>Exemple 2 :</strong> Dans une course de 10 chevaux, combien y a-t-il de podiums possibles (1er, 2ème, 3ème) ?
@@ -315,8 +262,6 @@ Le nombre de permutations est :
     <span class="resultat">720 podiums possibles</span>
   </div>
 </div>
-
-<!-- EXO 3 -->
 <div class="exo">
   <div class="enonce">
     <strong>Exemple 3 :</strong> Combien de façons peut-on ranger 5 livres différents sur une étagère ?
@@ -330,20 +275,45 @@ Le nombre de permutations est :
     <span class="resultat">120 façons</span>
   </div>
 </div>
-
 <hr>
-
-<!-- ============================================ -->
-
 
 <!-- Bouton en bas de page -->
 <div class="open-link-container">
     <button class="open-link-btn" onclick="openHtmlPage()">
-        <i class="fas fa-window-restore"></i>
         Si la page ne s'affiche pas correctement : Cliquez ici
     </button>
 </div>
 
+<style>
+  .open-link-container {
+    display: flex; justify-content: center; align-items: center;
+    margin: 30px auto 20px; padding: 0 12px; width: 100%;
+    box-sizing: border-box;
+  }
+  .open-link-btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    gap: 10px; background: linear-gradient(135deg, #1a5276, #2874a6);
+    color: #ffffff; border: none; padding: 16px 28px;
+    font-size: 1rem; font-weight: 700; border-radius: 12px;
+    cursor: pointer; box-shadow: 0 6px 18px rgba(26, 82, 118, 0.35);
+    font-family: inherit; max-width: 100%; text-align: center;
+    line-height: 1.35;
+  }
+  .open-link-btn:hover {
+    background: linear-gradient(135deg, #154360, #1f5b85);
+  }
+  @media (max-width: 480px) {
+    .open-link-btn { padding: 14px 20px; font-size: 0.9rem; width: 100%; }
+  }
+</style>
+
+<script>
+  function openHtmlPage() {
+    window.open(window.location.href, '_blank');
+  }
+</script>
+
+</div>
 <script>
 function toggleCorr(btn) {
   var corr = btn.nextElementSibling;
@@ -362,13 +332,5 @@ function toggleCorr(btn) {
   }
 }
 </script>
-
-<script>
-  function openHtmlPage() {
-    // Ouvre le fichier dans une nouvelle fenêtre/onglet.
-    window.open(window.location.href, '_blank');
-  }
-</script>
-
 </body>
 </html>
